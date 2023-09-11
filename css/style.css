@@ -4,15 +4,16 @@ body {
 }
 
 h1 {
-    font-size:x-large;
+    font-size: x-large;
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
 }
 
-h2, h3 {
+h2,
+h3 {
     font-size: large;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color:antiquewhite;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: antiquewhite;
 }
 
 p {
@@ -22,7 +23,7 @@ p {
 img {
     border-width: 5px;
     border-style: solid;
-    border-color:aquamarine;
+    border-color: aquamarine;
     padding: 10px;
     margin: 20px;
     border-top-right-radius: 30px;
