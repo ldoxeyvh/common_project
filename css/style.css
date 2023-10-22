@@ -1,35 +1,128 @@
+* {
+    text-align: center;
+    margin: auto;
+}
+
 body {
-    background-color: #4739a8;
-    color: white;
+    background-color: #041854;
+    color: rgb(253, 248, 248);
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
 h1 {
-    font-size: x-large;
-    font-family: 'Courier New', Courier, monospace;
-    text-align: center;
+    font-size: xx-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 10px;
 }
 
-h2,
+h2 {
+    font-size: x-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: antiquewhite;
+    margin: 10px;
+}
+
 h3 {
     font-size: large;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: antiquewhite;
+    margin: 10px;
+}
+
+span {
+    display: block;
+    margin-bottom: 5px;
 }
 
 p {
-    line-height: 1.15
+    margin: 10px;
 }
 
-img {
+img,
+video {
     border-width: 5px;
     border-style: solid;
     border-color: aquamarine;
     padding: 10px;
-    margin: 20px;
     border-top-right-radius: 30px;
 }
 
-li {
-    display: inline-block;
-    margin-left: 50px;
+nav {
+    padding: 10px;
+    background-color: rgb(1, 1, 30);
+}
+
+nav ul {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 100px);
+}
+
+nav ul li {
+    margin: auto;
+    padding: 5px;
+}
+
+footer {
+    height: 100px;
+}
+
+video {
+    width: 100%;
+}
+
+.main_photo {
+    width: 90%;
+}
+
+.small-gallery {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    padding: 10px;
+}
+
+.large-gallery {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto;
+    gap: 15px;
+    padding: 10px;
+}
+
+#skip {
+    position: absolute;
+    transform: translateY(-100%);
+}
+
+
+
+#current_page {
+    border: 2px solid white;
+    border-radius: 15px;
+    background-color: #3f57a1;
+    animation: nav-animation 0.5s;
+    padding: inherit;
+}
+
+@keyframes nav-animation {
+    from {
+        background-color: rgb(1, 1, 30);
+    }
+
+    to {
+        background-color: #3f57a1;
+    }
+}
+
+@media (prefers-reduce-motion: reduce) {
+    .gif {
+        display: none;
+    }
+
+    #current_page {
+        animation: none;
+    }
 }
