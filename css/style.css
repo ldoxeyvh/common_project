@@ -158,7 +158,7 @@ video {
 
 @media screen and (min-width: 800px) {
     body {
-        font-size: large
+        font-size: large;
     }
 
     nav ul {
