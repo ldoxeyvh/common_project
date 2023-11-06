@@ -1,6 +1,6 @@
 * {
     text-align: center;
-    margin: auto;
+    /* margin: auto; */
 }
 
 body {
@@ -8,6 +8,7 @@ body {
     color: rgb(253, 248, 248);
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
+    margin: auto;
 }
 
 h1 {
@@ -37,6 +38,7 @@ span {
 
 p {
     margin: 10px;
+    font-size: 1em;
 }
 
 img,
@@ -46,10 +48,11 @@ video {
     border-color: aquamarine;
     padding: 10px;
     border-top-right-radius: 30px;
+    margin: auto;
 }
 
 nav {
-    padding: 10px;
+    padding: 20px;
     background-color: rgb(1, 1, 30);
 }
 
@@ -59,9 +62,16 @@ nav ul {
     grid-template-columns: repeat(3, 100px);
 }
 
-nav ul li {
+nav ul li a {
     margin: auto;
     padding: 5px;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    border: 2px solid white;
+    border-radius: 15px;
+    animation: nav-hover-animation 0.5s;
 }
 
 footer {
@@ -70,6 +80,10 @@ footer {
 
 video {
     width: 100%;
+}
+
+.subsection {
+    margin-bottom: 50px;
 }
 
 .main_photo {
@@ -97,14 +111,19 @@ video {
     transform: translateY(-100%);
 }
 
+#skip:focus {
+    position: static;
+}
 
+*:focus {
+    border: solid 2px orange;
+}
 
 #current_page {
     border: 2px solid white;
     border-radius: 15px;
     background-color: #3f57a1;
     animation: nav-animation 0.5s;
-    padding: inherit;
 }
 
 @keyframes nav-animation {
@@ -117,6 +136,16 @@ video {
     }
 }
 
+@keyframes nav-hover-animation {
+    from {
+        border-color: rgb(1, 1, 30);
+    }
+
+    to {
+        border-color: white;
+    }
+}
+
 @media (prefers-reduce-motion: reduce) {
     .gif {
         display: none;
@@ -124,5 +153,64 @@ video {
 
     #current_page {
         animation: none;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        font-size: 2vw
+    }
+
+    nav ul {
+        grid-template-columns: repeat(3, 150px);
+    }
+
+    .pet {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pet-gallery {
+        grid-row: span 2;
+    }
+
+    .primary {
+        height: 100%;
+    }
+
+    .travel-primary {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+    }
+
+    .large-gallery {
+        grid-template-columns: repeat(3, auto);
+    }
+
+    .travel-location {
+        margin-bottom: 50px;
+    }
+
+    .recipe {
+        margin-bottom: 50px;
+    }
+
+    .recipe-primary {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 20px;
+    }
+
+    .recipe-descrip {
+        grid-row: span 2;
+    }
+
+    .recipe-gallery {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(3, auto);
     }
 }
