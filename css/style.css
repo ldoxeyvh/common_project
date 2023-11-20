@@ -6,27 +6,27 @@
 body {
     background-color: #041854;
     color: rgb(253, 248, 248);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Nunito", Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     margin: auto;
 }
 
 h1 {
     font-size: xx-large;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Nunito", Geneva, Tahoma, sans-serif;
     margin: 10px;
 }
 
 h2 {
     font-size: x-large;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Nunito", Geneva, Tahoma, sans-serif;
     color: antiquewhite;
     margin: 10px;
 }
 
 h3 {
     font-size: large;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Nunito", Geneva, Tahoma, sans-serif;
     color: antiquewhite;
     margin: 10px;
 }
@@ -45,10 +45,15 @@ img,
 video {
     border-width: 5px;
     border-style: solid;
-    border-color: aquamarine;
+    border-color: lightgrey;
     padding: 10px;
     border-top-right-radius: 30px;
     margin: auto;
+}
+
+img:hover,
+video:hover {
+    border-color: aquamarine;
 }
 
 nav {
@@ -76,6 +81,7 @@ nav ul li a:focus {
 
 footer {
     height: 100px;
+    background-image: url(/images/footer_stars.jpg);
 }
 
 video {
@@ -146,13 +152,9 @@ video {
     }
 }
 
-@media (prefers-reduce-motion: reduce) {
-    .gif {
+@media (prefers-reduce-motion: no-preference) {
+    body {
         display: none;
-    }
-
-    #current_page {
-        animation: none;
     }
 }
 
@@ -214,3 +216,5 @@ video {
         grid-template-columns: repeat(3, auto);
     }
 }
+
+@media screen and (min-width: 1200px) {}
