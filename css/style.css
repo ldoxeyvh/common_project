@@ -81,7 +81,7 @@ nav ul li a:focus {
 
 footer {
     height: 100px;
-    background-image: url(/images/footer_stars.jpg);
+    background-image: url(images/footer_stars.jpg);
 }
 
 video {
@@ -90,11 +90,11 @@ video {
 
 .pet img,
 .pet video {
-    cursor: url(/images/paw_cursor.jpg), auto;
+    cursor: url(images/paw_cursor.jpg), auto;
 }
 
 .recipe img {
-    cursor: url(/images/list_cursor.jpg), auto;
+    cursor: url(images/list_cursor.jpg), auto;
 }
 
 .subsection {
@@ -124,7 +124,7 @@ video {
 
 .large-gallery img,
 .travel-primary img {
-    cursor: url(/images/plane_cursor.png), auto;
+    cursor: url(images/plane_cursor.png), auto;
 }
 
 #skip {
